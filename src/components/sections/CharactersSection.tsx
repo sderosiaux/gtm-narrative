@@ -8,12 +8,14 @@ const characters = [
     role: 'Platform Lead',
     description: 'Leads the team that runs Kafka and the internal data streaming platform. Sees every incident, every ticket, and every "Kafka is acting weird" Slack thread.',
     color: '#8b5cf6', // primary purple
+    imageSrc: '/0-emma.jpg',
   },
   {
     name: 'Daniel',
     role: 'Senior Application Engineer',
     description: 'Builds customer-facing services that rely on Kafka. Loves building features. Does not love spending nights jumping between dashboards to find out why a consumer stopped behaving.',
     color: '#f59e0b', // amber
+    imageSrc: '/0-daniel.jpg',
   },
 ];
 
@@ -23,18 +25,21 @@ const supportingCast = [
     role: 'Security Lead',
     description: 'Raises flags when sensitive data appears in the wrong place. Wants strong guarantees without blocking all progress.',
     color: '#ef4444', // red
+    imageSrc: '/0-sonia.jpg',
   },
   {
     name: 'Miguel',
     role: 'Head of Data & Analytics',
     description: 'Leads data warehouse, BI, and lakehouse projects. Wants trusted streams he can plug into data models and dashboards.',
     color: '#10b981', // green
+    imageSrc: '/0-miguel.jpg',
   },
   {
     name: 'Leah',
     role: 'AI Lead',
     description: 'Runs the AI/ML group. Wants real-time, high quality data for scoring, recommendations, and fraud models. Tired of "we can\'t trust this stream yet".',
     color: '#3b82f6', // blue
+    imageSrc: '/0-leah.jpg',
   },
 ];
 
@@ -61,7 +66,6 @@ export function CharactersSection() {
               key={character.name}
               {...character}
               delay={index * 0.2}
-              imagePlaceholder="AI illustration placeholder"
             />
           ))}
         </div>
@@ -79,7 +83,6 @@ export function CharactersSection() {
               key={character.name}
               {...character}
               delay={0.4 + index * 0.15}
-              imagePlaceholder="AI illustration"
             />
           ))}
         </div>

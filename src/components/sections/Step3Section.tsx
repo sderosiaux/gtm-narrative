@@ -1,6 +1,7 @@
 'use client';
 
-import { StepHeader, ComicPanel, Narration, AnimatedSection, Panel } from '@/components/ui';
+import Image from 'next/image';
+import { StepHeader, ComicPanel, AnimatedSection } from '@/components/ui';
 
 const STEP_COLOR = '#f59e0b'; // Amber - Decentralization
 
@@ -26,52 +27,12 @@ export function Step3Section() {
             </p>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            <ComicPanel
-              visual="Emma's JIRA board: dozens of tickets labeled Create topic, Update ACL, Add connector, Change retention"
-              visualBg="bg-gradient-to-br from-amber-50 to-orange-100 dark:from-amber-900/20 dark:to-orange-900/20"
-              delay={0.1}
-            >
-              <div className="space-y-3">
-                <p className="text-sm font-semibold text-amber-600">Daniel</p>
-                <p className="text-neutral-700 dark:text-neutral-200">
-                  &ldquo;This is not a board. This is a wall of cries for help.&rdquo;
-                </p>
-              </div>
-            </ComicPanel>
-
-            <ComicPanel
-              visual="Emma scrolling through similar tickets"
-              visualBg="bg-gradient-to-br from-violet-50 to-purple-100 dark:from-violet-900/20 dark:to-purple-900/20"
-              delay={0.2}
-            >
-              <div className="space-y-3">
-                <p className="text-sm font-semibold text-purple-600">Emma</p>
-                <p className="text-neutral-700 dark:text-neutral-200">
-                  &ldquo;They all want similar things: new topics, access, small changes. None of this should require custom work every time.&rdquo;
-                </p>
-              </div>
-            </ComicPanel>
-          </div>
-
-          <AnimatedSection delay={0.3} className="mt-6">
-            <div className="bg-white dark:bg-neutral-900 rounded-2xl p-6 border border-neutral-200 dark:border-neutral-800 shadow-md">
-              <div className="flex items-start gap-4">
-                <div className="bg-red-100 dark:bg-red-900/30 rounded-lg p-3 text-sm flex-shrink-0">
-                  <span className="text-red-600 dark:text-red-400 font-medium">Slack ping</span>
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-neutral-500 mb-1">Team Lead</p>
-                  <p className="text-neutral-700 dark:text-neutral-200">
-                    &ldquo;Hey, any ETA on our topic request? It is blocking our release.&rdquo;
-                  </p>
-                  <p className="text-sm font-semibold text-purple-600 mt-4 italic">
-                    Emma (thinking): &ldquo;We cannot be the bottleneck forever.&rdquo;
-                  </p>
-                </div>
-              </div>
-            </div>
-          </AnimatedSection>
+          <ComicPanel
+            imageSrc="/4-step3-ch1.jpg"
+            imageAlt="Emma's JIRA board full of Kafka-related tickets"
+            layout="visual-only"
+            delay={0.1}
+          />
         </div>
 
         {/* Challenge 2: Shadow moves */}
@@ -85,49 +46,12 @@ export function Step3Section() {
             </p>
           </AnimatedSection>
 
-          <div className="grid lg:grid-cols-3 gap-6">
-            <ComicPanel
-              visual="Production incident review, muted call atmosphere"
-              visualBg="bg-gradient-to-br from-red-50 to-pink-100 dark:from-red-900/20 dark:to-pink-900/20"
-              delay={0.1}
-            >
-              <div className="space-y-3">
-                <p className="text-sm font-semibold text-neutral-600">Engineer</p>
-                <p className="text-neutral-700 dark:text-neutral-200">
-                  &ldquo;We just changed the schema on the fly. It worked in dev.&rdquo;
-                </p>
-              </div>
-            </ComicPanel>
-
-            <ComicPanel
-              visual="Dashboard chart nose-diving, red alerts"
-              visualBg="bg-gradient-to-br from-gray-50 to-slate-100 dark:from-gray-900/20 dark:to-slate-900/20"
-              delay={0.2}
-            >
-              <div className="space-y-3">
-                <Narration>
-                  The system reacted exactly as configured. The organization did not.
-                </Narration>
-                <p className="text-sm font-semibold text-amber-600 mt-2">Daniel</p>
-                <p className="text-neutral-700 dark:text-neutral-200">
-                  &ldquo;If every team invents its own way to do changes, we will never catch up.&rdquo;
-                </p>
-              </div>
-            </ComicPanel>
-
-            <ComicPanel
-              visual="Security Lead raising an eyebrow"
-              visualBg="bg-gradient-to-br from-red-50 to-orange-100 dark:from-red-900/20 dark:to-orange-900/20"
-              delay={0.3}
-            >
-              <div className="space-y-3">
-                <p className="text-sm font-semibold text-red-600">Security Lead</p>
-                <p className="text-neutral-700 dark:text-neutral-200">
-                  &ldquo;We do not want to slow you down. Yet we need predictability. We need to know how changes happen.&rdquo;
-                </p>
-              </div>
-            </ComicPanel>
-          </div>
+          <ComicPanel
+            imageSrc="/4-step3-ch2.jpg"
+            imageAlt="Production incident review with dashboard showing issues"
+            layout="visual-only"
+            delay={0.1}
+          />
         </div>
 
         {/* Challenge 3: Developers vs Platform */}
@@ -142,59 +66,27 @@ export function Step3Section() {
           </AnimatedSection>
 
           <ComicPanel
-            visual="Emma and Daniel in a one-on-one meeting"
-            visualBg="bg-gradient-to-br from-violet-50 to-amber-50 dark:from-violet-900/20 dark:to-amber-900/20"
-            layout="horizontal"
+            imageSrc="/4-step3-ch3.jpg"
+            imageAlt="Emma and Daniel discussing the balance between freedom and control"
+            layout="visual-only"
             delay={0.1}
-          >
-            <div className="space-y-4">
-              <div className="space-y-2">
-                <p className="text-sm font-semibold text-amber-600">Daniel</p>
-                <p className="text-neutral-700 dark:text-neutral-200">
-                  &ldquo;Developers do not want freedom for fun. They just want to stop waiting.&rdquo;
-                </p>
-              </div>
-              <div className="space-y-2">
-                <p className="text-sm font-semibold text-purple-600">Emma</p>
-                <p className="text-neutral-700 dark:text-neutral-200">
-                  &ldquo;And platform does not want control for ego. We just know what happens when there are no rules.&rdquo;
-                </p>
-              </div>
-            </div>
-          </ComicPanel>
-
-          <AnimatedSection delay={0.2} className="mt-8">
-            <Panel variant="dark" size="lg">
-              <div className="text-center max-w-2xl mx-auto">
-                <p className="text-sm font-semibold text-purple-400 mb-2">Emma</p>
-                <p className="text-lg text-neutral-200">
-                  &ldquo;We need a third path. Teams move on their own, inside guardrails enforced by the platform.&rdquo;
-                </p>
-              </div>
-            </Panel>
-          </AnimatedSection>
+          />
         </div>
 
         {/* What Emma starts to see */}
         <AnimatedSection className="mb-16">
-          <Panel variant="accent" size="lg">
-            <div className="text-center max-w-3xl mx-auto">
-              <h3 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-6">
-                What Emma Starts to See
-              </h3>
-              <p className="text-lg text-neutral-700 dark:text-neutral-200 mb-4">
-                &ldquo;Teams should request new topics or access through one place. Policies and patterns should attach automatically.&rdquo;
-              </p>
-              <p className="text-lg text-neutral-700 dark:text-neutral-200">
-                &ldquo;Developers should feel they have power. At the same time the system keeps them inside safe boundaries without constant meetings.&rdquo;
-              </p>
+          <div className="rounded-3xl overflow-hidden shadow-xl border border-neutral-200 dark:border-neutral-800">
+            <div className="relative aspect-[16/10] w-full bg-white dark:bg-neutral-900">
+              <Image
+                src="/4-step3-conclu.jpg"
+                alt="Emma designing self-service portal with guardrails"
+                fill
+                className="object-contain"
+                sizes="(max-width: 1200px) 100vw, 1200px"
+              />
             </div>
-          </Panel>
+          </div>
         </AnimatedSection>
-
-        <Narration variant="conclusion" className="mb-20 max-w-3xl mx-auto text-center border-l-0 pl-0">
-          Decentralization was not the enemy. Unstructured decentralization was.
-        </Narration>
 
         {/* Capabilities list */}
         <AnimatedSection className="mb-16">
@@ -237,50 +129,19 @@ export function Step3Section() {
           </h3>
         </AnimatedSection>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
-          <ComicPanel
-            visual="Developer from Cards team using Conduktor self-serve to create topic. UI shows policies applied."
-            visualBg="bg-gradient-to-br from-amber-100 to-orange-100 dark:from-amber-900/30 dark:to-orange-900/30"
-            delay={0.1}
-          >
-            <div className="space-y-3">
-              <p className="text-sm font-semibold text-blue-600">Developer</p>
-              <p className="text-neutral-700 dark:text-neutral-200">
-                &ldquo;I pick my domain, purpose, expected data. The rest is handled. Retention, naming, encryption, all come from the template.&rdquo;
-              </p>
+        <AnimatedSection className="mb-12">
+          <div className="rounded-3xl overflow-hidden shadow-xl border border-neutral-200 dark:border-neutral-800">
+            <div className="relative aspect-[16/10] w-full bg-white dark:bg-neutral-900">
+              <Image
+                src="/4-step3-outcome.jpg"
+                alt="Developer using self-service portal with policies applied automatically"
+                fill
+                className="object-contain"
+                sizes="(max-width: 1200px) 100vw, 1200px"
+              />
             </div>
-          </ComicPanel>
-
-          <ComicPanel
-            visual="Emma looking at dashboard of recent changes, all controlled flows"
-            visualBg="bg-gradient-to-br from-violet-100 to-purple-100 dark:from-violet-900/30 dark:to-purple-900/30"
-            delay={0.2}
-          >
-            <div className="space-y-3">
-              <p className="text-sm font-semibold text-purple-600">Emma</p>
-              <p className="text-neutral-700 dark:text-neutral-200">
-                &ldquo;This is the first week I have not spent nights chasing surprise changes.&rdquo;
-              </p>
-            </div>
-          </ComicPanel>
-
-          <ComicPanel
-            visual="Daniel in a sprint review, confident"
-            visualBg="bg-gradient-to-br from-green-100 to-emerald-100 dark:from-green-900/30 dark:to-emerald-900/30"
-            delay={0.3}
-          >
-            <div className="space-y-3">
-              <p className="text-sm font-semibold text-amber-600">Daniel</p>
-              <p className="text-neutral-700 dark:text-neutral-200">
-                &ldquo;We cut lead time for Kafka changes from weeks to days. Without adding more people. We just stopped doing handcrafted work every time.&rdquo;
-              </p>
-            </div>
-          </ComicPanel>
-        </div>
-
-        <Narration variant="conclusion" className="max-w-3xl mx-auto text-center border-l-0 pl-0">
-          Autonomy and safety finally shared the same space.
-        </Narration>
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   );

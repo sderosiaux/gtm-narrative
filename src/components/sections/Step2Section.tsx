@@ -1,6 +1,7 @@
 'use client';
 
-import { StepHeader, ComicPanel, Narration, AnimatedSection, Panel } from '@/components/ui';
+import Image from 'next/image';
+import { StepHeader, ComicPanel, AnimatedSection } from '@/components/ui';
 
 const STEP_COLOR = '#10b981'; // Green - Clarity
 
@@ -27,60 +28,11 @@ export function Step2Section() {
           </AnimatedSection>
 
           <ComicPanel
-            visual="Cross-team review meeting. Screens show three topics: customer_events, customer-update, cust_evt"
-            visualBg="bg-gradient-to-br from-green-50 to-emerald-100 dark:from-green-900/20 dark:to-emerald-900/20"
-            layout="horizontal"
+            imageSrc="/3-step2-ch1.jpg"
+            imageAlt="Cross-team meeting with screens showing customer_events, customer-update, cust_evt"
+            layout="visual-only"
             delay={0.1}
-          >
-            <div className="space-y-4">
-              <div className="space-y-3">
-                <p className="text-sm font-semibold text-blue-600">Team A Lead</p>
-                <p className="text-neutral-700 dark:text-neutral-200">
-                  &ldquo;We send customer profile updates here.&rdquo;
-                </p>
-              </div>
-              <div className="space-y-3">
-                <p className="text-sm font-semibold text-orange-600">Team B Lead</p>
-                <p className="text-neutral-700 dark:text-neutral-200">
-                  &ldquo;We send profile changes here, too, for our product.&rdquo;
-                </p>
-              </div>
-              <div className="space-y-3">
-                <p className="text-sm font-semibold text-teal-600">Team C Lead</p>
-                <p className="text-neutral-700 dark:text-neutral-200">
-                  &ldquo;We send KYC updates into this one.&rdquo;
-                </p>
-              </div>
-            </div>
-          </ComicPanel>
-
-          <div className="grid md:grid-cols-2 gap-6 mt-6">
-            <ComicPanel
-              visual="Data Analyst on the call, confused expression"
-              visualBg="bg-gradient-to-br from-amber-50 to-yellow-100 dark:from-amber-900/20 dark:to-yellow-900/20"
-              delay={0.2}
-            >
-              <div className="space-y-3">
-                <p className="text-sm font-semibold text-amber-600">Data Analyst</p>
-                <p className="text-neutral-700 dark:text-neutral-200">
-                  &ldquo;If I want &lsquo;the customer profile&rsquo;, which topic is the source of truth?&rdquo;
-                </p>
-              </div>
-            </ComicPanel>
-
-            <ComicPanel
-              visual="Emma glances at Daniel, concerned"
-              visualBg="bg-gradient-to-br from-violet-50 to-purple-100 dark:from-violet-900/20 dark:to-purple-900/20"
-              delay={0.3}
-            >
-              <div className="space-y-3">
-                <p className="text-sm font-semibold text-purple-600">Emma (thinking)</p>
-                <p className="text-neutral-700 dark:text-neutral-200 italic">
-                  &ldquo;We are not short on events. We are short on shared meaning.&rdquo;
-                </p>
-              </div>
-            </ComicPanel>
-          </div>
+          />
         </div>
 
         {/* Challenge 2: Who owns this thing */}
@@ -94,46 +46,12 @@ export function Step2Section() {
             </p>
           </AnimatedSection>
 
-          <div className="grid lg:grid-cols-3 gap-6">
-            <ComicPanel
-              visual="Incident report on screen. A field meaning changed in a topic, breaking downstream."
-              visualBg="bg-gradient-to-br from-red-50 to-pink-100 dark:from-red-900/20 dark:to-pink-900/20"
-              delay={0.1}
-            >
-              <div className="space-y-3">
-                <p className="text-sm font-semibold text-red-600">Security Lead</p>
-                <p className="text-neutral-700 dark:text-neutral-200">
-                  &ldquo;Who owns this topic?&rdquo;
-                </p>
-              </div>
-            </ComicPanel>
-
-            <ComicPanel
-              visual="Silence in the room. People looking at each other."
-              visualBg="bg-gradient-to-br from-gray-50 to-slate-100 dark:from-gray-900/20 dark:to-slate-900/20"
-              delay={0.2}
-            >
-              <div className="space-y-3">
-                <p className="text-sm font-semibold text-neutral-600">Team Lead</p>
-                <p className="text-neutral-700 dark:text-neutral-200">
-                  &ldquo;We created it two years ago. The people who built it moved teams.&rdquo;
-                </p>
-              </div>
-            </ComicPanel>
-
-            <ComicPanel
-              visual="Emma flipping through a wiki with outdated notes"
-              visualBg="bg-gradient-to-br from-violet-50 to-purple-100 dark:from-violet-900/20 dark:to-purple-900/20"
-              delay={0.3}
-            >
-              <div className="space-y-3">
-                <p className="text-sm font-semibold text-purple-600">Emma</p>
-                <p className="text-neutral-700 dark:text-neutral-200">
-                  &ldquo;This is no longer a tech problem. This is an ownership problem.&rdquo;
-                </p>
-              </div>
-            </ComicPanel>
-          </div>
+          <ComicPanel
+            imageSrc="/3-step2-ch2.jpg"
+            imageAlt="Incident report meeting with confused team members"
+            layout="visual-only"
+            delay={0.1}
+          />
         </div>
 
         {/* Challenge 3: One bank, many rules */}
@@ -148,50 +66,27 @@ export function Step2Section() {
           </AnimatedSection>
 
           <ComicPanel
-            visual="Whiteboard with four clusters: On-prem, Cloud, Europe, US. Each with different naming conventions."
-            visualBg="bg-gradient-to-br from-cyan-50 to-blue-100 dark:from-cyan-900/20 dark:to-blue-900/20"
+            imageSrc="/3-step2-ch3.jpg"
+            imageAlt="Whiteboard with four clusters showing different naming conventions"
+            layout="visual-only"
             delay={0.1}
-          >
-            <div className="space-y-4">
-              <p className="text-sm font-semibold text-purple-600">Emma</p>
-              <p className="text-neutral-700 dark:text-neutral-200">
-                &ldquo;Here we call it <code className="bg-neutral-100 dark:bg-neutral-800 px-2 py-0.5 rounded text-sm">cust_events</code>. There it is <code className="bg-neutral-100 dark:bg-neutral-800 px-2 py-0.5 rounded text-sm">customer-topic</code>. Over here we use service names. This is how things rot slowly.&rdquo;
-              </p>
-            </div>
-          </ComicPanel>
-
-          <AnimatedSection delay={0.2} className="mt-8">
-            <Panel variant="dark" size="lg">
-              <div className="text-center">
-                <p className="text-sm font-semibold text-purple-400 mb-2">Emma</p>
-                <p className="text-lg text-neutral-200">
-                  &ldquo;If we do not create central clarity now, decentralization later will just expand chaos.&rdquo;
-                </p>
-              </div>
-            </Panel>
-          </AnimatedSection>
+          />
         </div>
 
         {/* What Emma starts to see */}
         <AnimatedSection className="mb-16">
-          <Panel variant="accent" size="lg">
-            <div className="text-center max-w-3xl mx-auto">
-              <h3 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-6">
-                What Emma Starts to See
-              </h3>
-              <p className="text-lg text-neutral-700 dark:text-neutral-200 mb-4">
-                &ldquo;We need data domains that match the bank. Each domain needs clear ownership. Streams should live inside these domains, not float in the void.&rdquo;
-              </p>
-              <p className="text-lg text-neutral-700 dark:text-neutral-200">
-                &ldquo;And we need a catalog where any engineer or analyst can see: what is this stream, who owns it, what does it represent, who can use it.&rdquo;
-              </p>
+          <div className="rounded-3xl overflow-hidden shadow-xl border border-neutral-200 dark:border-neutral-800">
+            <div className="relative aspect-[16/10] w-full bg-white dark:bg-neutral-900">
+              <Image
+                src="/3-step2-conclu.jpg"
+                alt="Emma drawing data domains on whiteboard"
+                fill
+                className="object-contain"
+                sizes="(max-width: 1200px) 100vw, 1200px"
+              />
             </div>
-          </Panel>
+          </div>
         </AnimatedSection>
-
-        <Narration variant="conclusion" className="mb-20 max-w-3xl mx-auto text-center border-l-0 pl-0">
-          The problem was not that teams moved fast. The problem was that no one had a shared map.
-        </Narration>
 
         {/* Capabilities list */}
         <AnimatedSection className="mb-16">
@@ -234,50 +129,19 @@ export function Step2Section() {
           </h3>
         </AnimatedSection>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
-          <ComicPanel
-            visual="Conduktor view with domains and ownership badges"
-            visualBg="bg-gradient-to-br from-green-100 to-emerald-100 dark:from-green-900/30 dark:to-emerald-900/30"
-            delay={0.1}
-          >
-            <div className="space-y-3">
-              <p className="text-sm font-semibold text-amber-600">Data Analyst</p>
-              <p className="text-neutral-700 dark:text-neutral-200">
-                &ldquo;I can finally search for &lsquo;Customer Profile&rsquo; and see the product streams that are actually certified.&rdquo;
-              </p>
+        <AnimatedSection className="mb-12">
+          <div className="rounded-3xl overflow-hidden shadow-xl border border-neutral-200 dark:border-neutral-800">
+            <div className="relative aspect-[16/10] w-full bg-white dark:bg-neutral-900">
+              <Image
+                src="/3-step2-outcome.jpg"
+                alt="Team viewing Conduktor with domains and ownership badges"
+                fill
+                className="object-contain"
+                sizes="(max-width: 1200px) 100vw, 1200px"
+              />
             </div>
-          </ComicPanel>
-
-          <ComicPanel
-            visual="Emma in a call, relaxed posture"
-            visualBg="bg-gradient-to-br from-violet-100 to-purple-100 dark:from-violet-900/30 dark:to-purple-900/30"
-            delay={0.2}
-          >
-            <div className="space-y-3">
-              <p className="text-sm font-semibold text-purple-600">Emma</p>
-              <p className="text-neutral-700 dark:text-neutral-200">
-                &ldquo;Every stream lives inside a domain that owns it. You know who to talk to. You know what it means.&rdquo;
-              </p>
-            </div>
-          </ComicPanel>
-
-          <ComicPanel
-            visual="Daniel planning a new feature, smiling"
-            visualBg="bg-gradient-to-br from-amber-100 to-orange-100 dark:from-amber-900/30 dark:to-orange-900/30"
-            delay={0.3}
-          >
-            <div className="space-y-3">
-              <p className="text-sm font-semibold text-amber-600">Daniel (thinking)</p>
-              <p className="text-neutral-700 dark:text-neutral-200 italic">
-                &ldquo;I can see existing streams before creating a new one. So I reuse instead of duplicating by default.&rdquo;
-              </p>
-            </div>
-          </ComicPanel>
-        </div>
-
-        <Narration variant="conclusion" className="max-w-3xl mx-auto text-center border-l-0 pl-0">
-          Clarity did not slow anyone down. It removed friction that had been present for years.
-        </Narration>
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   );

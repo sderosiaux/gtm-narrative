@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { AnimatedSection } from './AnimatedSection';
 
 interface CharacterCardProps {
@@ -7,7 +8,7 @@ interface CharacterCardProps {
   role: string;
   description: string;
   color: string;
-  imagePlaceholder?: string;
+  imageSrc?: string;
   delay?: number;
 }
 
@@ -16,27 +17,31 @@ export function CharacterCard({
   role,
   description,
   color,
-  imagePlaceholder,
+  imageSrc,
   delay = 0,
 }: CharacterCardProps) {
   return (
     <AnimatedSection delay={delay}>
       <div className="group relative overflow-hidden rounded-2xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-        {/* Character Image Placeholder */}
-        <div
-          className="h-64 flex items-center justify-center relative overflow-hidden"
-          style={{ backgroundColor: `${color}15` }}
-        >
-          <div
-            className="w-32 h-32 rounded-full flex items-center justify-center text-4xl font-bold text-white shadow-lg"
-            style={{ backgroundColor: color }}
-          >
-            {name.charAt(0)}
-          </div>
-          {imagePlaceholder && (
-            <span className="absolute bottom-2 right-2 text-xs text-neutral-400 dark:text-neutral-600">
-              {imagePlaceholder}
-            </span>
+        {/* Character Image */}
+        <div className="aspect-[4/3] relative overflow-hidden bg-white dark:bg-neutral-900">
+          {imageSrc ? (
+            <Image
+              src={imageSrc}
+              alt={`${name} - ${role}`}
+              fill
+              className="object-contain"
+              sizes="(max-width: 768px) 100vw, 400px"
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center">
+              <div
+                className="w-32 h-32 rounded-full flex items-center justify-center text-4xl font-bold text-white shadow-lg"
+                style={{ backgroundColor: color }}
+              >
+                {name.charAt(0)}
+              </div>
+            </div>
           )}
         </div>
 
