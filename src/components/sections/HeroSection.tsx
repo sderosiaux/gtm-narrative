@@ -5,7 +5,7 @@ import { AnimatedSection, Narration } from '@/components/ui';
 
 export function HeroSection() {
   return (
-    <section className="min-h-screen flex flex-col justify-center py-20 px-6">
+    <section id="hero" className="min-h-screen flex flex-col justify-center py-20 px-6">
       <div className="max-w-6xl mx-auto w-full">
         {/* Title */}
         <AnimatedSection className="text-center mb-16">

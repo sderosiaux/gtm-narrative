@@ -5,3 +5,4 @@ export { CharacterCard } from './CharacterCard';
 export { StepHeader } from './StepHeader';
 export { Narration } from './Narration';
 export { ComicPanel } from './ComicPanel';
+export { SideNav } from './SideNav';

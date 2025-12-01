@@ -7,7 +7,7 @@ const STEP_COLOR = '#f59e0b'; // Amber - Decentralization
 
 export function Step3Section() {
   return (
-    <section className="py-32 px-6">
+    <section id="step-3" className="py-32 px-6">
       <div className="max-w-6xl mx-auto">
         <StepHeader
           stepNumber={3}

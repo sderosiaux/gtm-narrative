@@ -5,7 +5,7 @@ import { AnimatedSection } from '@/components/ui';
 
 export function ContextSection() {
   return (
-    <section className="py-32 px-6 bg-neutral-50 dark:bg-neutral-950">
+    <section id="context" className="py-32 px-6 bg-neutral-50 dark:bg-neutral-950">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <AnimatedSection className="text-center mb-8">

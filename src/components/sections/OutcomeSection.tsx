@@ -12,7 +12,7 @@ const steps = [
 
 export function OutcomeSection() {
   return (
-    <section className="py-32 px-6 bg-gradient-to-b from-neutral-900 to-neutral-950">
+    <section id="outcome" className="py-32 px-6 bg-gradient-to-b from-neutral-900 to-neutral-950">
       <div className="max-w-6xl mx-auto">
         {/* The Journey Overview */}
         <AnimatedSection className="text-center mb-20">

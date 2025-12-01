@@ -7,7 +7,7 @@ const STEP_COLOR = '#3b82f6'; // Blue - Velocity
 
 export function Step1Section() {
   return (
-    <section className="py-32 px-6">
+    <section id="step-1" className="py-32 px-6">
       <div className="max-w-6xl mx-auto">
         <StepHeader
           stepNumber={1}

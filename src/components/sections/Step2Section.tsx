@@ -7,7 +7,7 @@ const STEP_COLOR = '#10b981'; // Green - Clarity
 
 export function Step2Section() {
   return (
-    <section className="py-32 px-6 bg-neutral-50 dark:bg-neutral-950">
+    <section id="step-2" className="py-32 px-6 bg-neutral-50 dark:bg-neutral-950">
       <div className="max-w-6xl mx-auto">
         <StepHeader
           stepNumber={2}

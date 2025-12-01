@@ -7,7 +7,7 @@ const STEP_COLOR = '#8b5cf6'; // Purple - Data Products
 
 export function Step4Section() {
   return (
-    <section className="py-32 px-6 bg-neutral-50 dark:bg-neutral-950">
+    <section id="step-4" className="py-32 px-6 bg-neutral-50 dark:bg-neutral-950">
       <div className="max-w-6xl mx-auto">
         <StepHeader
           stepNumber={4}

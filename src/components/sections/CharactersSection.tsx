@@ -45,7 +45,7 @@ const supportingCast = [
 
 export function CharactersSection() {
   return (
-    <section className="py-32 px-6 bg-neutral-50 dark:bg-neutral-950">
+    <section id="characters" className="py-32 px-6 bg-neutral-50 dark:bg-neutral-950">
       <div className="max-w-6xl mx-auto">
         <AnimatedSection className="text-center mb-16">
           <span className="text-sm font-semibold text-primary-600 dark:text-primary-400 tracking-wider uppercase mb-4 block">
