@@ -11,8 +11,8 @@ export function Step2Section() {
       <div className="max-w-6xl mx-auto">
         <StepHeader
           stepNumber={2}
-          title="Create Central Clarity"
-          subtitle="Agreement before more speed."
+          title="Define the Rules"
+          subtitle="Platform team takes control."
           color={STEP_COLOR}
         />
 
@@ -143,11 +143,11 @@ export function Step2Section() {
             </p>
             <ul className="space-y-4">
               {[
-                'One control plane that spans clusters',
-                'Data domains that mirror the business',
-                'Ownership attached to each topic, connector, schema',
-                'Shared naming and structure rules',
-                'Central audits and patterns',
+                'One control plane to rule all clusters',
+                'Data domains that map to your org chart',
+                'Every resource gets an owner — no more orphans',
+                'Naming conventions enforced, not suggested',
+                'Full audit trail of who did what, when',
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -158,7 +158,7 @@ export function Step2Section() {
               ))}
             </ul>
             <p className="mt-8 text-sm font-semibold text-emerald-400">
-              She labels this page: Step 2 - Central Clarity
+              She labels this page: Step 2 - Define the Rules
             </p>
           </div>
         </AnimatedSection>
@@ -193,11 +193,11 @@ export function Step2Section() {
             </div>
             <ul className="space-y-4">
               {[
-                'Clear ownership across teams and domains',
-                'Shared streaming rules that match how your business works',
-                'A predictable experience across all clusters and clouds',
-                'Faster onboarding and fewer back-and-forth discussions',
-                'A strong foundation for safe self-service and real data products',
+                'Platform team finally has a source of truth',
+                'No more "who owns this topic?" questions',
+                'Audit-ready: every change is tracked',
+                'New clusters follow the same rules automatically',
+                'Foundation is set — now teams can safely self-serve',
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-sky-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

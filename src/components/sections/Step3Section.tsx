@@ -11,8 +11,8 @@ export function Step3Section() {
       <div className="max-w-6xl mx-auto">
         <StepHeader
           stepNumber={3}
-          title="Enable Safe Decentralization"
-          subtitle="Freedom inside guardrails."
+          title="Let Teams Self-Serve"
+          subtitle="Developers move fast, platform sleeps well."
           color={STEP_COLOR}
         />
 
@@ -143,11 +143,11 @@ export function Step3Section() {
             </p>
             <ul className="space-y-4">
               {[
-                'Self-service for topics, ACLs, connectors, schemas',
-                'Guardrails applied through policies',
-                'Approval workflows where risk is high, automation where risk is low',
-                'Per team access flows tied to identity systems',
-                'Real time enforcement at a proxy layer',
+                'Developers create topics in clicks, not tickets',
+                'Policies apply automatically — no manual checks',
+                'Low-risk actions = instant, high-risk = approval',
+                'Teams manage their own schemas and contracts',
+                'GitOps, Terraform, CLI — your choice, same rules',
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -158,7 +158,7 @@ export function Step3Section() {
               ))}
             </ul>
             <p className="mt-8 text-sm font-semibold text-emerald-400">
-              She labels it: Step 3 - Safe Decentralization
+              She labels it: Step 3 - Let Teams Self-Serve
             </p>
           </div>
         </AnimatedSection>
@@ -193,11 +193,11 @@ export function Step3Section() {
             </div>
             <ul className="space-y-4">
               {[
-                'Faster development with less waiting and fewer tickets',
-                'Safe, predictable autonomy for every team working with Kafka',
-                'Lower operational load for platform and security teams',
-                'Strong guardrails that prevent risky patterns from reaching production',
-                'Real decentralization that accelerates innovation instead of creating chaos',
+                'From 2-week ticket to 2-minute self-serve',
+                'Developers ship without waiting on platform team',
+                '80% fewer Kafka-related tickets',
+                'Platform team focuses on strategy, not requests',
+                'Innovation speeds up, incidents stay down',
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-sky-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
