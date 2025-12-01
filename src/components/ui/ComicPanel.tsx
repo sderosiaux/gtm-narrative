@@ -1,7 +1,7 @@
 'use client';
 
 import { ReactNode } from 'react';
-import Image from 'next/image';
+import { AppImage } from './AppImage';
 import { AnimatedSection } from './AnimatedSection';
 
 interface ComicPanelProps {
@@ -29,7 +29,7 @@ function VisualContent({
   if (imageSrc) {
     return (
       <div className="relative aspect-[16/10] w-full bg-white dark:bg-neutral-900">
-        <Image
+        <AppImage
           src={imageSrc}
           alt={imageAlt || 'Panel illustration'}
           fill
@@ -78,7 +78,7 @@ export function ComicPanel({
           <div className={`${imageSrc ? 'bg-white dark:bg-neutral-900' : `aspect-square md:aspect-auto ${visualBg}`} flex items-center justify-center ${imageSrc ? '' : 'p-8'}`}>
             {imageSrc ? (
               <div className="relative aspect-[4/3] w-full">
-                <Image
+                <AppImage
                   src={imageSrc}
                   alt={imageAlt || 'Panel illustration'}
                   fill

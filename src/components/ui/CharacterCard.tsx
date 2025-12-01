@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+import { AppImage } from './AppImage';
 import { AnimatedSection } from './AnimatedSection';
 
 interface CharacterCardProps {
@@ -26,7 +26,7 @@ export function CharacterCard({
         {/* Character Image */}
         <div className="aspect-[4/3] relative overflow-hidden bg-white dark:bg-neutral-900">
           {imageSrc ? (
-            <Image
+            <AppImage
               src={imageSrc}
               alt={`${name} - ${role}`}
               fill

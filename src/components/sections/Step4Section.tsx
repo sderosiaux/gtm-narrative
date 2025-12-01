@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+import { AppImage } from '@/components/ui/AppImage';
 import { StepHeader, ComicPanel, AnimatedSection } from '@/components/ui';
 
 const STEP_COLOR = '#8b5cf6'; // Purple - Data Products
@@ -114,7 +114,7 @@ export function Step4Section() {
         <AnimatedSection className="mb-16">
           <div className="rounded-3xl overflow-hidden shadow-xl border border-neutral-200 dark:border-neutral-800">
             <div className="relative aspect-[16/10] w-full bg-white dark:bg-neutral-900">
-              <Image
+              <AppImage
                 src="/5-step4-conclu.jpg"
                 alt="Emma writing Data Contracts and data product concepts"
                 fill
@@ -168,7 +168,7 @@ export function Step4Section() {
         <AnimatedSection className="mb-12">
           <div className="rounded-3xl overflow-hidden shadow-xl border border-neutral-200 dark:border-neutral-800">
             <div className="relative aspect-[16/10] w-full bg-white dark:bg-neutral-900">
-              <Image
+              <AppImage
                 src="/5-step4-outcome.jpg"
                 alt="Team celebrating with Conduktor showing Customer 360 Streaming Product"
                 fill

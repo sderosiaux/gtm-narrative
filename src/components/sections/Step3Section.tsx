@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+import { AppImage } from '@/components/ui/AppImage';
 import { StepHeader, ComicPanel, AnimatedSection } from '@/components/ui';
 
 const STEP_COLOR = '#f59e0b'; // Amber - Decentralization
@@ -114,7 +114,7 @@ export function Step3Section() {
         <AnimatedSection className="mb-16">
           <div className="rounded-3xl overflow-hidden shadow-xl border border-neutral-200 dark:border-neutral-800">
             <div className="relative aspect-[16/10] w-full bg-white dark:bg-neutral-900">
-              <Image
+              <AppImage
                 src="/4-step3-conclu.jpg"
                 alt="Emma designing self-service portal with guardrails"
                 fill
@@ -167,7 +167,7 @@ export function Step3Section() {
         <AnimatedSection className="mb-12">
           <div className="rounded-3xl overflow-hidden shadow-xl border border-neutral-200 dark:border-neutral-800">
             <div className="relative aspect-[16/10] w-full bg-white dark:bg-neutral-900">
-              <Image
+              <AppImage
                 src="/4-step3-outcome.jpg"
                 alt="Developer using self-service portal with policies applied automatically"
                 fill

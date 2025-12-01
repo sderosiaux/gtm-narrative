@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+import { AppImage } from '@/components/ui/AppImage';
 import { AnimatedSection, Narration } from '@/components/ui';
 
 export function HeroSection() {
@@ -21,7 +21,7 @@ export function HeroSection() {
         <AnimatedSection delay={0.2} className="mb-16">
           <div className="rounded-3xl overflow-hidden shadow-2xl border border-neutral-200 dark:border-neutral-800">
             <div className="relative aspect-[16/10] w-full bg-white dark:bg-neutral-900">
-              <Image
+              <AppImage
                 src="/1-intro.jpg"
                 alt="Northbridge Bank - Emma and Daniel facing the streaming challenge"
                 fill

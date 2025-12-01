@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+import { AppImage } from '@/components/ui/AppImage';
 import { AnimatedSection } from '@/components/ui';
 
 export function ContextSection() {
@@ -25,7 +25,7 @@ export function ContextSection() {
         <AnimatedSection className="mb-16">
           <div className="rounded-3xl overflow-hidden shadow-xl border border-neutral-200 dark:border-neutral-800">
             <div className="relative aspect-[16/10] w-full bg-white dark:bg-neutral-900">
-              <Image
+              <AppImage
                 src="/0-situation.jpg"
                 alt="The stakes at Northbridge Bank - leadership pressure and team challenges"
                 fill

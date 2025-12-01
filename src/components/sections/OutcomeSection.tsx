@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+import { AppImage } from '@/components/ui/AppImage';
 import { AnimatedSection } from '@/components/ui';
 
 const steps = [
@@ -46,7 +46,7 @@ export function OutcomeSection() {
         <AnimatedSection className="mb-16">
           <div className="rounded-3xl overflow-hidden shadow-2xl border border-neutral-700">
             <div className="relative aspect-[16/10] w-full bg-neutral-900">
-              <Image
+              <AppImage
                 src="/6-final-outcome.jpg"
                 alt="Emma, Daniel, and the team together - calm and confident"
                 fill

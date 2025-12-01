@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+import { AppImage } from '@/components/ui/AppImage';
 import { StepHeader, ComicPanel, Narration, AnimatedSection } from '@/components/ui';
 
 const STEP_COLOR = '#3b82f6'; // Blue - Velocity
@@ -114,7 +114,7 @@ export function Step1Section() {
         <AnimatedSection className="mb-16">
           <div className="rounded-3xl overflow-hidden shadow-xl border border-neutral-200 dark:border-neutral-800">
             <div className="relative aspect-[16/10] w-full bg-white dark:bg-neutral-900">
-              <Image
+              <AppImage
                 src="/2-step1-conclu.jpg"
                 alt="Emma at whiteboard drawing the vision for unified observability"
                 fill
@@ -166,7 +166,7 @@ export function Step1Section() {
         <AnimatedSection className="mb-12">
           <div className="rounded-3xl overflow-hidden shadow-xl border border-neutral-200 dark:border-neutral-800">
             <div className="relative aspect-[16/10] w-full bg-white dark:bg-neutral-900">
-              <Image
+              <AppImage
                 src="/2-step1-outcome.jpg"
                 alt="Daniel and Priya looking at unified Conduktor Console"
                 fill
