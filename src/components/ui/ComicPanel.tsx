@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { AnimatedSection } from './AnimatedSection';
 
 interface ComicPanelProps {
-  children: ReactNode;
+  children?: ReactNode;
   visual?: string;
   imageSrc?: string;
   imageAlt?: string;
