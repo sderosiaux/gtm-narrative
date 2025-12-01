@@ -1,5 +1,6 @@
 export { HeroSection } from './HeroSection';
 export { CharactersSection } from './CharactersSection';
+export { ContextSection } from './ContextSection';
 export { Step1Section } from './Step1Section';
 export { Step2Section } from './Step2Section';
 export { Step3Section } from './Step3Section';

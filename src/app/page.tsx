@@ -1,6 +1,7 @@
 import {
   HeroSection,
   CharactersSection,
+  ContextSection,
   Step1Section,
   Step2Section,
   Step3Section,
@@ -12,6 +13,7 @@ export default function Home() {
   return (
     <main className="overflow-x-hidden">
       <HeroSection />
+      <ContextSection />
       <CharactersSection />
       <Step1Section />
       <Step2Section />
